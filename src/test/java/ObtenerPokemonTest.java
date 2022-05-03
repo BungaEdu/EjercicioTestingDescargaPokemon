@@ -30,14 +30,14 @@ public class ObtenerPokemonTest {
     public void probarPokemon3Peso(){
         // TODO Comprueba que al preguntar por Pokémon con 3 obtienes el peso de 1000.
         Pokemon pokemon3 = ObtenerPokemonRequest.Companion.get(3);
-        Assertions.assertEquals(pokemon3.getWeight(),"1000");
+        Assertions.assertEquals(pokemon3.getWeight(),1000);
     }
 
     @Test
     public void probarPokemon3Altura(){
         // TODO Comprueba que al preguntar por Pokémon con 3 obtienes la altura de 20.
-        Pokemon pokemon3 = ObtenerPokemonRequest.Companion.get("20");
-        Assertions.assertEquals(pokemon3.getId(),3);
+        Pokemon pokemon3 = ObtenerPokemonRequest.Companion.get(3);
+        Assertions.assertEquals(pokemon3.getHeight(),20);
     }
 
     @Test
@@ -55,6 +55,7 @@ public class ObtenerPokemonTest {
     public void probarPokemon25NombreEId(){
         // TODO Comprueba que cuando descargas un Pokémon con el id 25 obtienes un nombre, si descargas ese Pokémon por nombre obtienes un id.
         //  Comprueba que ambos Pokémon coinciden (el que has obtenido mediante el nombre y el que has obtenido mediante el id).
+
     }
 
     @Test
