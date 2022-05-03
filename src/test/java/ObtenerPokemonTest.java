@@ -66,8 +66,9 @@ public class ObtenerPokemonTest {
         //  Estos números deberían poder cambiar fácilmente
         int minId = 140;
         int maxId = 150;
+        int maxMenosMin=maxId-minId;
         String verificarNombre[] = new String[]{"kabuto", "kabutops", "aerodactyl", "snorlax", "articuno", "zapdos", "moltres", "dratini", "dragonair", "dragonite", "mewtwo"};
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i <= maxMenosMin; i++) {
             Pokemon pokemon140a150 = ObtenerPokemonRequest.Companion.get(140+i);
             Assertions.assertEquals(verificarNombre[i], pokemon140a150.getName());
         }
