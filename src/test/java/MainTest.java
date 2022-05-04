@@ -16,12 +16,13 @@ public class MainTest {
     @Test
     public void test1 () {
 
-        Pokemon pokemon1 = ObtenerPokemonRequest.Companion.get(3);
-        Pokemon pokemon2 = ObtenerPokemonRequest.Companion.get(3);
+        Pokemon pokemon1 = ObtenerPokemonRequest.Companion.get(1);
+        Pokemon pokemon2 = ObtenerPokemonRequest.Companion.get(2);
 
         Pokemon ganador = MainKt.pelea(pokemon1, pokemon2);
-        Assertions.assertEquals(null,ganador);
+        Assertions.assertEquals(ganador,pokemon2);
 
+        /*
         Pokemon pokemon3 = ObtenerPokemonRequest.Companion.get(3);
         Assertions.assertEquals(pokemon1.getWeight(), pokemon2.getWeight());
 
@@ -29,7 +30,28 @@ public class MainTest {
 
 
     //comprobación para que te de null, a través de assetions. y el que sea
-        //
+        */
+    }
+
+
+    @Test
+    public void test2 () {
+
+        Pokemon pokemon1 = ObtenerPokemonRequest.Companion.get(2);
+        Pokemon pokemon2 = ObtenerPokemonRequest.Companion.get(1);
+
+        Pokemon ganador = MainKt.pelea(pokemon1, pokemon2);
+        Assertions.assertEquals(ganador, pokemon1);
+    }
+
+    @Test
+    public void test3 () {
+
+        Pokemon pokemon1 = ObtenerPokemonRequest.Companion.get(2);
+        Pokemon pokemon2 = ObtenerPokemonRequest.Companion.get(2);
+
+        Pokemon ganador = MainKt.pelea(pokemon1, pokemon2);
+        Assertions.assertEquals(null, ganador);
     }
 
 }
