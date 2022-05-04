@@ -3,13 +3,17 @@ import org.junit.jupiter.api.Test;
 
 public class ObtenerPokemonsTest {
 
-
+//prueba
     @Test
     public void probarPokemonExceptionRed() {
         // TODO que se lanza la exception correcta //lo hacemos nosotros
         Assertions.assertThrows(ObtenerPokemonsRequest.ExceptionEnRed.class, () -> ObtenerPokemonsRequest.Companion.get(-1, 1));
     }
 
+    //assertThrows es comprobar que cuando llamo a una función con X parametros de entrada, se lanza una excepción
+    //a la derecha lo que tiene que hacer y a la izquierda la excepción que nos tiene que devolver
+    //ejecutame lo de la derecha y comprueba si se lanza la excepción de la izquierda
+    //Cuando intentes acceder al pokemon X, se lanzará la excepción ObtenerPokemonRequest
     @Test
     public void probarPokemonExceptionID() {
         // TODO que se lanza la exception correcta
