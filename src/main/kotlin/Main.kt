@@ -7,7 +7,9 @@ class PokemonInvalido : Exception()
 fun main() {
     val pokemon1 = ObtenerPokemonRequest.get(1)
     val pokemon2 = ObtenerPokemonRequest.get(1)
-
+    val ej4 = Ejercicio4()
+    ej4.arrayPokemons = ObtenerPokemonsRequest.get(1,9)
+    ej4.iniciarEjercicio4()
 }
 
 
