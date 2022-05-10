@@ -37,14 +37,22 @@ public class Ejercicio4 {
 
 
 
-    public Pokemon[] getPokemonMasGordo(int peso) {
+    public Pokemon[] getPokemonMasGordo() {
         Pokemon[] out = new Pokemon[arrayPokemons.length];
         int i = 0, j = 0;
+        long aux=0;
+        int weight[] = new int[arrayPokemons.length];
         for (Pokemon pokemon : arrayPokemons) {
+            weight[j]= (int) pokemon.getWeight();
+            j++;
+            if (peso[j]<peso[j-1])
+                aux=peso[j];
+
             if (pokemon.getWeight() > peso) {
                 out[i] = pokemon;
                 i++;
             }
+
         }
         //Probar con systemarraycopy
 
