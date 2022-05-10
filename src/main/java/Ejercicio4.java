@@ -46,6 +46,7 @@ public class Ejercicio4 {
                 i++;
             }
         }
+        //Probar con systemarraycopy
 
         // TODO
 
