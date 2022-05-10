@@ -15,7 +15,7 @@ public class Ejercicio4 {
         }
     }
 
-
+    /********************Método pokemonMasGordosQue*******************/
     public Pokemon[] pokemonMasGordosQue(Integer peso) {
         Pokemon[] out = new Pokemon[arrayPokemons.length];
         int i = 0, j = 0;
@@ -25,7 +25,6 @@ public class Ejercicio4 {
                 i++;
             }
         }
-
         Pokemon[] outWithoutNull = new Pokemon[i];
         i=0;
         for (j=0;j<=outWithoutNull.length;j++) {
@@ -35,6 +34,63 @@ public class Ejercicio4 {
         }
         return outWithoutNull;
     }
+
+
+
+    public Pokemon[] getPokemonMasGordo(int peso) {
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0, j = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            if (pokemon.getWeight() > peso) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+
+        // TODO
+
+    }
+
+
+
+
+    /*******************EJERCICIOS******************/
+    public Pokemon[] getPokemonMenosGordo(int peso) {
+
+        // TODO
+
+    }
+
+    public Pokemon[] getPokemonPesoEntre(int pesoMaximo, int pesoMinimo) { // pesoMaximo y pesoMinimo no incluidos
+
+        // TODO
+
+    }
+
+    public Pokemon[] getPokemonNombreMasLargoQue(int peso) {
+
+        // TODO
+
+    }
+
+    public Pokemon[] getPokemonNombreMasCortoQue(int longitud) {
+
+        // TODO
+
+    }
+
+    public Pokemon[] getPokemonConLetras(String letras)  {
+
+    } // Atención, esta operación debe devolver un array de pokemons vacio si letras fuera null.
+
+
+
+
+
+
+
+
+
 
 }
 
