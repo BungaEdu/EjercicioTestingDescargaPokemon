@@ -38,6 +38,12 @@ public class Ejercicio4 {
             System.out.println(pokemon);
         }
 
+        System.out.println("Resultado de getPokemonQueContengaLasSiguientesLetras");
+        Pokemon[] resultadoEj6 = getPokemonQueContengaLasSiguientesLetras("ab");
+        for (Pokemon pokemon : resultadoEj6) {
+            System.out.println(pokemon);
+        }
+
     }
 
     /*****************************Método pokemonMasGordosQue**************************/
@@ -136,12 +142,37 @@ public class Ejercicio4 {
         return outWithoutNull;
     }
 
-    /*****************************NO ME DA TIEMPO*************************
-    public Pokemon[] getPokemonConLetras(String letras)  {
+    /********************MÉTODO getPokemonQueContengaLasSiguientesLetras**********************/
+    public Pokemon[] getPokemonQueContengaLasSiguientesLetras(String letras)  {
+        Pokemon[] out = new Pokemon[arrayPokemons.length];
+        int i = 0;
+        for (Pokemon pokemon : arrayPokemons) {
+            char [] arrayLetras = letras.toCharArray();
+
+            boolean encontrado = true;
+            for (char letra : arrayLetras) {
+                if (pokemon.getName().contains(String.valueOf(letra))) { //pongo ""+char para pasarlo a String
+                    encontrado = false;
+                    break;
+                }
+            }
+            if(encontrado) {
+                out[i] = pokemon;
+                i++;
+            }
+        }
+        Pokemon[] outWithoutNull = new Pokemon[i];
+        for (int j=0;j<=outWithoutNull.length;j++) {
+            if(out[j]!=null) {
+                outWithoutNull[j] = out[j];
+            }
+        }
+        return outWithoutNull;
 
     } // Atención, esta operación debe devolver un array de pokemons vacio si letras fuera null.
 
-/*
+    // No hay que tener en cuenta el orden
+    /*
 FIN EJERCICIOS
 *******************************************/
 
