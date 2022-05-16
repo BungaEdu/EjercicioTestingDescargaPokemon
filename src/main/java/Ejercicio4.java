@@ -56,14 +56,19 @@ public class Ejercicio4 {
                 i++;
             }
         }
+
+        if (i==9) {
+            Pokemon[] outWithoutNull = new Pokemon[i + 1];
+        }
         Pokemon[] outWithoutNull = new Pokemon[i];
         for (int j=0;j<=outWithoutNull.length;j++) {
-            if(out[j]!=null) {
-                outWithoutNull[j] = out[j];
+                if(out[j]!=null) {
+                    outWithoutNull[j] = out[j];
+                }
             }
+            return outWithoutNull;
         }
-        return outWithoutNull;
-    }
+
 
     /*****************************Método pokemonMenosGordosQue************************/
     public Pokemon[] pokemonMenosGordosQue(Integer peso) {
