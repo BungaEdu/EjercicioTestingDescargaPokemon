@@ -14,7 +14,7 @@ public class ObtenerPokemonTest {
 
     @Test
     public void probarPokemon3Nombre() {
-        // TODO Comprueba que al preguntar por Pokémon con id 3 obtienes a venasaur.
+        //TODO Comprueba que al preguntar por Pokémon con id 3 obtienes a venasaur.
         Pokemon pokemon3 = ObtenerPokemonRequest.Companion.get(3);
         Assertions.assertEquals(pokemon3.getName(), "venusaur");
     }
