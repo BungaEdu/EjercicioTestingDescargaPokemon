@@ -57,20 +57,28 @@ public class Ejercicio4 {
             }
         }
 
+        //TODO probar con el copy Array of, a ver si sale.
+
+        /*
         if (i==9) {
             Pokemon[] outWithoutNull = new Pokemon[i + 1];
-        }
+        }*/
         Pokemon[] outWithoutNull = new Pokemon[i];
-        for (int j=0;j<=outWithoutNull.length;j++) {
-                if(out[j]!=null) {
-                    outWithoutNull[j] = out[j];
-                }
+        for (int j=0;j<outWithoutNull.length;j++) {
+            if(out[j]!=null) {
+                outWithoutNull[j] = out[j];
             }
-            return outWithoutNull;
         }
+        return outWithoutNull;
+    }
+
 
 
     /*****************************Método pokemonMenosGordosQue************************/
+    /**
+     * @param peso
+     * @return
+     */
     public Pokemon[] pokemonMenosGordosQue(Integer peso) {
         Pokemon[] out = new Pokemon[arrayPokemons.length];
         int i = 0;
