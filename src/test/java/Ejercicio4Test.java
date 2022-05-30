@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class Ejercicio4Test {
     //Tengo que hacer test de todos los ejercicios, el segundo test me falla, seguramente tenga que cambiar mi código.
     static Ejercicio4 ej;
-
-    @BeforeAll
+/***************************************COSAS PARA CONTROLAR LOS TEST***********************************/
+    @BeforeAll  //Inicializa todos los test con la información que le ponga, en este caso, pinta, crea objeto y define el array
     static void firstInit() {
         System.out.println("firstInit");
         ej = new Ejercicio4();
@@ -14,12 +14,12 @@ class Ejercicio4Test {
     }
 
 
-    @BeforeEach
+    @BeforeEach //antes de que empiece el test, se pone esto
     void setUp() {
         System.out.println("setUp");
     }
 
-    @AfterEach
+    @AfterEach //esto se pone al finalizar el test.
     void tearDown() {
         System.out.println("tearDown");
     }
@@ -64,6 +64,25 @@ class Ejercicio4Test {
         Pokemon[] pokemonActuales = ej.pokemonMasGordosQue(50);
         Assertions.assertArrayEquals(pokemonEsperados, pokemonActuales);
     }
+
+    @Test
+    void pruebas () {
+        Pokemon [] esperados = {
+                ej.arrayPokemons[0],
+                ej.arrayPokemons[1],
+                ej.arrayPokemons[2],
+                ej.arrayPokemons[3],
+                ej.arrayPokemons[4],
+                ej.arrayPokemons[5],
+                ej.arrayPokemons[6],
+                ej.arrayPokemons[7],
+                ej.arrayPokemons[8],
+        };
+        Pokemon[] actuales = ej.pokemonMasGordosQue(50);
+        Assertions.assertArrayEquals(esperados,actuales);
+    }
+
+
 
     @Test
     void pokemonMenosGordosQueBasico() {
